@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tedd James</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome Free (via jsDelivr) -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+  />
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">TEDD JAMES – Web Developer</h1>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2 class="hero-title">Working to Perfection</h2>
+      <p class="hero-subtitle">Showcasing My Software Expertise</p>
+      <a href="#about" class="btn">About Me</a>
+    </div>
+    <div class="hero-video">
+    <video autoplay muted loop playsinline>
+        <source src="/videos/codingvid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+    </video>
+    </div>
+  </section>
+
+  <!-- Who Am I -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">WHO AM I ?</h2>
+      <p class="about-text">
+        I am Tedd James, a dedicated software engineer focused on developing
+        innovative solutions. With a keen interest in coding and problem-solving,
+        I enjoy creating applications that enhance user experiences and streamline
+        processes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">My Expertise</h2>
+
+      <div class="skill">
+        <span class="skill-name">JavaScript</span>
+        <span class="percentage">90%</span>
+        <div class="bar">
+          <div class="fill" style="--target:90%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">React</span>
+        <span class="percentage">80%</span>
+        <div class="bar">
+          <div class="fill" style="--target:80%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Python &amp; Flask</span>
+        <span class="percentage">80%</span>
+        <div class="bar">
+          <div class="fill" style="--target:80%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">HTML &amp; CSS</span>
+        <span class="percentage">95%</span>
+        <div class="bar">
+          <div class="fill" style="--target:95%;"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Node.js</span>
+        <span class="percentage">75%</span>
+        <div class="bar">
+          <div class="fill" style="--target:75%;"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Portfolio / My Work -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="section-title">Some of My Work</h2>
+      <p class="portfolio-intro">
+      </p>
+
+      <div class="projects-masonry">
+        <div class="project-card">
+          <h3>AgriTrack</h3>
+          <p>A web app for farmers to keep track of their farm work.</p>
+          <a
+            href="https://github.com/teddjames/Agritrack"
+            class="btn-sm"
+            target="_blank"
+          >View Details</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Study Guide</h3>
+          <p>A full stack project that helps students in their
+            different educational activities.</p>
+          <a
+            href="https://github.com/teddjames/study-guide"
+            class="btn-sm"
+            target="_blank"
+          >View Details</a>
+        </div>
+
+        <div class="project-card">
+          <h3>ShotbyTJ</h3>
+          <p>My personal photography website built with HTML, CSS & JavaScript.</p>
+          <a
+            href="https://github.com/teddjames/ShotbyTJ"
+            class="btn-sm"
+            target="_blank"
+          >View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <h2 class="footer-title">Let's Connect</h2>
+      <div class="socials">
+        <a href="https://github.com/teddjames" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://instagram.com/teddjamez" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:iamteddjames@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- (No JS needed for portfolio cards) -->
+  <script src="index.js"></script>
+</body>
+</html>
