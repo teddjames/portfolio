@@ -38,7 +38,7 @@ This portfolio highlights:
 
 ## How to View it
 
-Click the foll0wing link: [Tedd's Portfolio]()
+Click the foll0wing link: [Tedd's Portfolio](https://teddjames.github.io/portfolio/)
 
 ## Author
 - Tedd James
