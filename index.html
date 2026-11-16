@@ -1,170 +1,362 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tedd James</title>
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- Font Awesome Free (via jsDelivr) -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-  />
-
-  <!-- Your custom styles -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">TEDD JAMES – Web Developer</h1>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-content">
-      <h2 class="hero-title">Working to Perfection</h2>
-      <p class="hero-subtitle">Showcasing My Software Expertise</p>
-      <a href="#about" class="btn">About Me</a>
-    </div>
-    <div class="hero-video">
-    <video autoplay muted loop playsinline>
-        <source src="videos/codingvid.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-    </video>
-    </div>
-  </section>
-
-  <!-- Who Am I -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section-title">WHO AM I ?</h2>
-      <p class="about-text">
-        I am Tedd James, a dedicated software engineer focused on developing
-        innovative solutions. With a keen interest in coding and problem-solving,
-        I enjoy creating applications that enhance user experiences and streamline
-        processes. I developed a strong foundation in software engineering through
-        my training at Moringa School, where I refined both my technical and 
-        collaborative skills.
-      </p>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="skills">
-    <div class="container">
-      <h2 class="section-title">My Expertise</h2>
-
-      <div class="skill">
-        <span class="skill-name">JavaScript</span>
-        <span class="percentage"></span>
-        <div class="bar">
-          <div class="fill" style="--target:90%;"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#050914" name="theme-color" />
+    <meta
+      content="Tedd James — software developer and visual creative. Explore interactive web apps, selected projects, photography and creative technology."
+      name="description"
+    />
+    <meta content="Tedd James — Beyond the Code" property="og:title" />
+    <meta content="Software, creative technology, and visual storytelling." property="og:description" />
+    <title>Tedd James | Web Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Press+Start+2P&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="index.js"></script>
+    <noscript>
+      <style>.loader{display:none}</style>
+    </noscript>
+  </head>
+  <body class="is-loading">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <!-- Loading screen -->
+    <div aria-live="polite" class="loader" id="loader" role="status">
+      <div class="loader__top"><span>PORTFOLIO</span><span>2026</span></div>
+      <div class="loader__center">
+        <div aria-hidden="true" class="loader__orbit">
+          <div class="loader__orbit-inner"><span>TJ</span></div>
         </div>
+        <p class="loader__caption">PREPARING YOUR EXPERIENCE</p>
+        <div class="loader__typing"><span id="loader-name"></span><span class="loader__cursor">_</span></div>
+        <div class="loader__track"><span id="loader-bar"></span></div>
+        <p class="loader__bottom">DESIGN <span>·</span> ENGINEERING <span>·</span> STORYTELLING</p>
       </div>
-
-      <div class="skill">
-        <span class="skill-name">React</span>
-        <span class="percentage"></span>
-        <div class="bar">
-          <div class="fill" style="--target:80%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name">Python &amp; Flask</span>
-        <span class="percentage"></span>
-        <div class="bar">
-          <div class="fill" style="--target:80%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name">HTML &amp; CSS</span>
-        <span class="percentage"></span>
-        <div class="bar">
-          <div class="fill" style="--target:95%;"></div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <span class="skill-name">Node.js</span>
-        <span class="percentage"></span>
-        <div class="bar">
-          <div class="fill" style="--target:75%;"></div>
-        </div>
-      </div>
-
+      <div class="loader__foot"><span>BUILDING WHAT'S NEXT</span><span id="loader-pct">00%</span></div>
     </div>
-  </section>
-
-  <!-- Portfolio / My Work -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <h2 class="section-title">Some of My Work</h2>
-      <p class="portfolio-intro">
-      </p>
-
-      <div class="projects-masonry">
-          <div class="project-card">
-          <h3>ShotbyTJ</h3>
-          <p>My personal photography website built with HTML, CSS & JavaScript.</p>
+    <div aria-hidden="true" class="top-progress" id="top-progress"></div>
+    <!-- Site header -->
+    <header class="header" id="page-top">
+      <a aria-label="Tedd James — Home" class="logo" href="#home"><span class="logo__monogram">TJ<span class="logo__dot">_</span></span><span class="logo__name">TEDD JAMES<br /><small>DEVELOPER × CREATIVE</small></span></a>
+      <nav aria-label="Main navigation" class="desktop-nav">
+        <a href="#work">WORK <span>↗</span></a>
+        <a href="#about">THE STORY <span>↗</span></a>
+        <a href="#stack">TOOLKIT <span>↗</span></a>
+      </nav>
+      <div class="header__actions">
+        <a class="header__cta" href="https://www.linkedin.com/in/tedd-james/" rel="noopener noreferrer" target="_blank">LET'S CONNECT <span>↗</span></a>
+        <button aria-controls="menu-overlay" aria-expanded="false" aria-label="Open navigation" class="menu-button" id="menu-button" type="button"><span></span><span></span></button>
+      </div>
+    </header>
+    <!-- Mobile and full-screen navigation -->
+    <div aria-hidden="true" class="menu-overlay" id="menu-overlay">
+      <button aria-label="Close navigation" class="menu-backdrop" id="menu-backdrop" type="button"></button>
+      <div class="menu-overlay__inner">
+        <p class="section-kicker">NAVIGATION / 00—04</p>
+        <a href="#home"><small>01</small> HOME</a>
+        <a href="#work"><small>02</small> WORK</a>
+        <a href="#about"><small>03</small> ABOUT</a>
+        <a href="#contact"><small>04</small> CONNECT</a>
+        <div class="menu-overlay__footer"><span>MADE TO MOVE.</span><span>© 2026 TEDD JAMES</span></div>
+      </div>
+    </div>
+    <main id="main">
+      <!-- Hero and interactive 3D visual -->
+      <section aria-labelledby="hero-title" class="hero" id="home">
+        <div aria-hidden="true" class="hero__contours">
+          <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 1440 800">
+            <path d="M-200 530C180 200 410 920 800 500s620-200 900-350" />
+            <path d="M-200 600C190 260 430 980 820 560s630-200 900-320" />
+            <path d="M-200 670C200 320 450 1040 840 620s640-200 900-290" />
+            <path d="M-200 460C170 140 390 860 780 440s610-200 900-380" />
+            <path d="M-200 390C160 80 370 800 760 380s600-200 900-410" />
+          </svg>
+        </div>
+        <div class="hero__frame">
+          <div class="hero__meta"><span class="eyebrow"><span class="live-dot"></span> PORTFOLIO</span><span class="eyebrow">KUALA LUMPUR • WORLDWIDE</span></div>
+          <div class="hero__content">
+            <div class="hero__titles" data-reveal="">
+              <p class="eyebrow hero__label">WEB DEVELOPER &amp; DESIGNER | CREATIVE DEVELOPER | SOFTWARE ENGINEER</p>
+              <h1 id="hero-title">TEDD<span class="hero__name-right">JAMES<span class="hero__asterisk">✳</span></span></h1>
+              <p class="hero__sub"><em>Beyond</em> the code.</p>
+              <p class="hero__description">Software developer, web designer, Computer Science student, and creative problem-solver.</p>
+              <div class="hero__buttons">
+                <a class="button button--dark" href="#work">EXPLORE MY WORK <span>↗</span></a>
+                <a class="button button--outline" href="#about">THE STORY <span>↓</span></a>
+              </div>
+              <div aria-label="Portfolio status" class="hero__terminal"><span class="terminal-live"></span><span>STATUS</span><strong>OPEN TO OPPORTUNITIES</strong><span class="terminal-caret">▌</span></div>
+            </div>
+            <div class="hero__visual" data-reveal="">
+              <div aria-hidden="true" class="hero__visual-ring"></div>
+              <div aria-hidden="true" class="hero__fallback hero__fallback--laptop">
+                <div class="fallback-card fallback-card--top"><span>NOW RUNNING</span><strong>tedd.js ●</strong></div>
+                <div class="fallback-cube"><span>3D</span></div>
+                <div class="fallback-laptop">
+                  <div class="fallback-screen">
+                    <div class="fallback-screen__top"><span></span><span></span><span></span><em>tedd@creative-studio</em></div>
+                    <div class="fallback-code">
+                      <p><span>const</span> developer = {</p>
+                      <p>&nbsp;&nbsp;name: <b>'Tedd James'</b>,</p>
+                      <p>&nbsp;&nbsp;focus: <b>'Full Stack'</b>,</p>
+                      <p>&nbsp;&nbsp;mindset: <b>'Keep building'</b></p>
+                      <p>};</p>
+                    </div>
+                  </div>
+                  <div class="fallback-stand"></div>
+                  <div class="fallback-base"></div>
+                  <div class="fallback-keyboard">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                  </div>
+                </div>
+                <div class="fallback-card fallback-card--bottom"><span>CURRENT QUEST</span><strong>Build something great</strong></div>
+              </div>
+              <canvas aria-hidden="true" id="hero-canvas"></canvas>
+              <div class="hero__visual-note note-top">◉ INTERACTIVE<br /> DEV CORE</div>
+              <div class="hero__visual-note note-bottom">MOVE TO EXPLORE ↗</div>
+              <div aria-hidden="true" class="hero__pixel-tag"><span>LIVE / 3D CORE</span><strong>IMMERSIVE WORKSPACE_</strong></div>
+            </div>
+          </div>
+          <div class="hero__footer"><span>01 / HELLO, WORLD</span><a href="#modes">SCROLL TO EXPLORE <b>↓</b></a><span>DESIGNED TO STAND OUT</span></div>
+        </div>
+      </section>
+      <div aria-label="Design. Build. Create. Repeat." class="marquee">
+        <div aria-hidden="true" class="marquee__inner">DESIGN <span>✳</span> BUILD <span>✳</span> CREATE <span>✳</span> REPEAT <span>✳</span> DESIGN <span>✳</span> BUILD <span>✳</span> CREATE <span>✳</span> REPEAT <span>✳</span></div>
+      </div>
+      <!-- Creative and software modes -->
+      <section aria-labelledby="modes-title" class="modes section-dark" id="modes">
+        <div class="section-head" data-reveal="">
+          <div>
+            <p class="section-kicker">01 / TWO SIDES, ONE VISION</p>
+            <h2 id="modes-title">BUILT TO <em>create.</em></h2>
+          </div>
+          <p>Code is what I build with. Creativity is how I think. Explore both sides of my work.</p>
+        </div>
+        <div class="modes__grid">
+          <a class="mode-card mode-card--build" data-reveal="" href="#work">
+            <div class="mode-card__top"><span>01 / SOFTWARE</span><span>VIEW BUILDS ↗</span></div>
+            <div aria-hidden="true" class="mode-card__art mode-card__art--build">
+              <div class="mock-window">
+                <div class="mock-window__top"><i></i><i></i><i></i><span>tedd / workspace</span></div>
+                <div class="mock-window__main">
+                  <div class="mock-window__side"></div>
+                  <div class="mock-window__code"><span>&lt;div class="future"&gt;</span><span>&nbsp;&nbsp;build( ideas );</span><span>&nbsp;&nbsp;ship( value );</span><span>&lt;/div&gt;</span></div>
+                </div>
+              </div>
+              <div class="mock-terminal">01. <b>hello, world_</b></div>
+            </div>
+            <div class="mode-card__bottom">
+              <h3>BUILD<br /><span>MODE</span></h3>
+              <p>Functional products.<br />Intelligent solutions.</p>
+              <span class="circle-arrow">↗</span>
+            </div>
+          </a>
           <a
+            class="mode-card mode-card--create"
+            data-reveal=""
             href="https://teddjames.github.io/shotbyteddjames/"
-            class="btn-sm"
+            rel="noopener noreferrer"
             target="_blank"
-          >View </a>
+          >
+            <div class="mode-card__top"><span>02 / VISUALS</span><span>VIEW PHOTOGRAPHY ↗</span></div>
+            <div aria-hidden="true" class="mode-card__art mode-card__art--create">
+              <div class="camera-composition">
+                <div class="camera-composition__sky"></div>
+                <div class="camera-composition__sun"></div>
+                <div class="camera-composition__ridge"></div>
+                <div class="camera-composition__ridge camera-composition__ridge--front"></div>
+                <div class="camera-composition__crosshair">+</div>
+              </div>
+              <span class="photo-coordinates">SHOTBYTJ<br />FRAME 001 — 35MM</span>
+            </div>
+            <div class="mode-card__bottom">
+              <h3>CREATE<br /><span>MODE</span></h3>
+              <p>Framed moments.<br />Stories with intention.</p>
+              <span class="circle-arrow">↗</span>
+            </div>
+          </a>
         </div>
-
-        <div class="project-card">
-          <h3>AgriTrack</h3>
-          <p>A web app for farmers to keep track of their farm work.</p>
-          <a
-            href="https://agritrack-oumz.onrender.com"
-            class="btn-sm"
-            target="_blank"
-          >View </a>
+      </section>
+      <!-- Projects and category filters -->
+      <section aria-labelledby="work-title" class="work section-dark" id="work">
+        <div class="section-head section-head--work" data-reveal="">
+          <div>
+            <p class="section-kicker">02 / THE WORK</p>
+            <h2 id="work-title"><span>PROJECTS.</span></h2>
+          </div>
         </div>
-
-        <div class="project-card">
-          <h3>Study Guide</h3>
-          <p>A full stack project that helps students in their
-            different educational activities.</p>
-          <a
-            href="https://github.com/teddjames/study-guide"
-            class="btn-sm"
-            target="_blank"
-          >View </a>
+        <div class="arcade-toolbar" data-reveal="">
+          <div aria-label="Filter projects" class="work__filter" role="group"><button aria-pressed="true" class="filter is-active" data-filter="all" type="button">ALL <sup>04</sup></button><button aria-pressed="false" class="filter" data-filter="software" type="button">SOFTWARE</button><button aria-pressed="false" class="filter" data-filter="creative" type="button">CREATIVE</button></div>
+          <div aria-live="polite" class="arcade-count" id="project-count">04 PROJECTS</div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <h2 class="footer-title">Let's Connect</h2>
-      <div class="socials">
-        <a href="https://github.com/teddjames" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="mailto:iamteddjames@gmail.com">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- (No JS needed for portfolio cards) -->
-  <script src="index.js"></script>
-</body>
+        <div class="project-grid" id="project-grid">
+          <article class="project project--wide" data-reveal="" data-type="software">
+            <div class="project__preview preview-malaysia">
+              <div class="preview-malaysia__window">
+                <div class="preview__chrome"><span>discover / malaysia</span><span>● ● ●</span></div>
+                <div class="preview-malaysia__inner">
+                  <p>DISCOVER MORE.</p>
+                  <strong>YOUR NEXT<br />ADVENTURE<br />STARTS HERE.</strong><span>EXPLORE DESTINATIONS ↗</span>
+                </div>
+              </div>
+              <div class="preview-malaysia__sphere"></div>
+              <div class="preview-tag">LIVE WEB APP / 001</div>
+              <div aria-hidden="true" class="pixel-corner">◈ VIEW FILE</div>
+            </div>
+            <div class="project__details">
+              <div>
+                <p class="project__number">01 / WEB APPLICATION</p>
+                <h3>Discover Malaysia</h3>
+                <p>A travel discovery and trip-planning experience for destinations across Malaysia.</p>
+                <div class="project__tags"><span>PYTHON</span><span>FLASK</span><span>SQLITE</span></div>
+              </div>
+              <a aria-label="View Discover Malaysia website" class="project__link" href="https://discover-malaysia.onrender.com" rel="noopener noreferrer" target="_blank">↗</a>
+            </div>
+          </article>
+          <article class="project" data-reveal="" data-type="software">
+            <div class="project__preview preview-agri">
+              <div class="preview-agri__board">
+                <div class="preview__chrome"><span>AGRI / TRACK</span><span>● ● ●</span></div>
+                <div class="preview-agri__body">
+                  <div class="preview-agri__meter"><span>FARM OVERVIEW</span><b>Good morning, Farmer.</b><i></i></div>
+                  <div class="preview-agri__chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                </div>
+              </div>
+              <div class="preview-tag">FARM MANAGEMENT / 002</div>
+              <div aria-hidden="true" class="pixel-corner">◈ VIEW FILE</div>
+            </div>
+            <div class="project__details">
+              <div>
+                <p class="project__number">02 / WEB APPLICATION</p>
+                <h3>AgriTrack</h3>
+                <p>A practical platform for organising farm activities and operational records.</p>
+                <div class="project__tags"><span>WEB APP</span><span>AGRICULTURE</span></div>
+              </div>
+              <a aria-label="Visit AgriTrack website" class="project__link" href="https://agritrack-oumz.onrender.com" rel="noopener noreferrer" target="_blank">↗</a>
+            </div>
+          </article>
+          <article class="project" data-reveal="" data-type="software">
+            <div class="project__preview preview-study">
+              <div class="preview-study__books">
+                <div>STUDY<br />GUIDE<span>01</span></div>
+                <div>PLAN<br />FOCUS<span>02</span></div>
+                <div>LEARN<br />BUILD<span>03</span></div>
+              </div>
+              <div class="preview-tag">EDUCATION / 003</div>
+              <div aria-hidden="true" class="pixel-corner">◈ VIEW FILE</div>
+            </div>
+            <div class="project__details">
+              <div>
+                <p class="project__number">03 / APPLICATION</p>
+                <h3>Study Guide</h3>
+                <p>A student-focused project that supports learning, organisation, and productivity.</p>
+                <div class="project__tags"><span>FULL STACK</span><span>EDUCATION</span></div>
+              </div>
+              <a aria-label="View Study Guide repository" class="project__link" href="https://github.com/teddjames/study-guide" rel="noopener noreferrer" target="_blank">↗</a>
+            </div>
+          </article>
+          <article class="project project--wide project--creative" data-reveal="" data-type="creative">
+            <div class="project__preview preview-shot">
+              <div class="preview-shot__frame preview-shot__frame--one">
+                <div class="preview-shot__landscape"></div>
+                <span>FIG. 001 / LIGHT</span>
+              </div>
+              <div class="preview-shot__frame preview-shot__frame--two">
+                <div class="preview-shot__landscape preview-shot__landscape--two"></div>
+                <span>FIG. 002 / MOVEMENT</span>
+              </div>
+              <div class="preview-shot__word">SHOTBY<span>TJ</span></div>
+              <div class="preview-tag">VISUAL STORYTELLING / 004</div>
+              <div aria-hidden="true" class="pixel-corner">◈ VIEW FILE</div>
+            </div>
+            <div class="project__details">
+              <div>
+                <p class="project__number">04 / CREATIVE PORTFOLIO</p>
+                <h3>ShotbyTJ</h3>
+                <p>My visual storytelling identity, documenting moments through photography and design.</p>
+                <div class="project__tags"><span>PHOTOGRAPHY</span><span>DESIGN</span><span>BRANDING</span></div>
+              </div>
+              <a aria-label="Visit ShotbyTJ website" class="project__link" href="https://teddjames.github.io/shotbyteddjames/" rel="noopener noreferrer" target="_blank">↗</a>
+            </div>
+          </article>
+        </div>
+        <div class="work__more" data-reveal=""><span>MORE IN THE WORKS.</span><a href="https://github.com/teddjames" rel="noopener noreferrer" target="_blank">EXPLORE GITHUB ↗</a></div>
+      </section>
+      <!-- Personal backstory -->
+      <section aria-labelledby="story-title" class="statement" id="about">
+        <div aria-hidden="true" class="statement__line"></div>
+        <div class="statement__top">
+          <p class="section-kicker">03 / BACKSTORY</p>
+          <p>CURIOUS BY NATURE. BUILDER BY CHOICE.</p>
+        </div>
+        <div class="statement__main">
+          <h2 data-reveal="" id="story-title">BEYOND THE<br /><em>CODE.</em></h2>
+          <div aria-hidden="true" class="statement__emblem">
+            <div class="emblem__outer">
+              <div class="emblem__inner">TJ</div>
+            </div>
+          </div>
+        </div>
+        <div class="statement__bottom statement__bottom--profile">
+          <div class="statement__copy" data-reveal="">
+            <span class="statement__badge"> PROFILE </span>
+            <h3>Curious by nature.<br /><span>A builder by choice.</span></h3>
+            <p>I'm Tedd James, a Computer Science student at Asia Pacific University, with a software engineering foundation from Moringa School. I like making things that solve real problems, exploring new technologies, and finding the creative side of development.</p>
+            <p>Outside the editor, I work with photography through ShotbyTJ. That balance of engineering and storytelling shapes how I think about products and the people using them.</p>
+          </div>
+          <div class="statement__facts" data-reveal="">
+            <div><span>BASED IN</span><strong>MALAYSIA &amp; KENYA</strong></div>
+            <div><span>STUDYING</span><strong>COMPUTER SCIENCE</strong></div>
+            <div><span>BUILDING WITH</span><strong>CODE + CREATIVITY</strong></div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills and toolkit -->
+      <section aria-labelledby="stack-title" class="stack section-dark" id="stack">
+        <div class="section-head" data-reveal="">
+          <div>
+            <p class="section-kicker">04 / WHAT I WORK WITH</p>
+            <h2 id="stack-title">MY <em>TOOLKIT.</em></h2>
+          </div>
+          <p>A toolkit built for creating reliable software and experiences worth remembering.</p>
+        </div>
+        <div class="stack__grid">
+          <div class="stack__cell" data-reveal=""><small>01</small><span aria-hidden="true" class="stack__icon">{ }</span><strong>PYTHON</strong><span>APPS &amp; LOGIC</span></div>
+          <div class="stack__cell" data-reveal=""><small>02</small><span aria-hidden="true" class="stack__icon">◩</span><strong>FLASK</strong><span>BACKEND SYSTEMS</span></div>
+          <div class="stack__cell" data-reveal=""><small>03</small><span aria-hidden="true" class="stack__icon">JS</span><strong>JAVASCRIPT</strong><span>INTERACTION</span></div>
+          <div class="stack__cell" data-reveal=""><small>04</small><span aria-hidden="true" class="stack__icon">&lt;/&gt;</span><strong>HTML / CSS</strong><span>WEB INTERFACES</span></div>
+          <div class="stack__cell" data-reveal=""><small>05</small><span aria-hidden="true" class="stack__icon">▦</span><strong>SQLITE / SQL</strong><span>DATA DESIGN</span></div>
+          <div class="stack__cell" data-reveal=""><small>06</small><span aria-hidden="true" class="stack__icon">⌘</span><strong>GIT / GITHUB</strong><span>VERSION CONTROL</span></div>
+        </div>
+      </section>
+      <!-- Contact and footer -->
+      <section aria-labelledby="contact-title" class="contact" id="contact">
+        <div aria-hidden="true" class="contact__contours"></div>
+        <div class="contact__top">
+          <p class="section-kicker">05 / NEXT UP</p>
+          <p>LET'S CONNECT</p>
+        </div>
+        <h2 data-reveal="" id="contact-title">LET'S MAKE<br /><em>SOMETHING</em><br /><span>REAL.</span></h2>
+        <div class="contact__bar">
+          <a class="contact__button" href="mailto:iamteddjames@gmail.com?subject=Let%27s%20collaborate">SEND AN EMAIL <span>↗</span></a>
+          <div class="contact__social">
+            <a href="https://github.com/teddjames" rel="noopener noreferrer" target="_blank">GITHUB ↗</a>
+            <a href="https://www.linkedin.com/in/tedd-james/" rel="noopener noreferrer" target="_blank">LINKEDIN ↗</a>
+            <a href="mailto:iamteddjames@gmail.com">EMAIL ↗</a>
+          </div>
+        </div>
+        <footer class="footer"><span>TEDD JAMES © <span id="copyright-year">2026</span></span><span>ENGINEERED TO CREATE.</span><a href="#home">BACK TO TOP ↑</a></footer>
+      </section>
+    </main>
+  </body>
 </html>
