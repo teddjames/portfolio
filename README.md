@@ -1,6 +1,6 @@
 # Tedd James – Web Developer Portfolio
 
-- Welcome to my personal web developer portfolio — a minimal, responsive, and dark-themed showcase of my skills, projects, and professional journey.
+- Welcome to my personal web developer portfolio — a minimal and  responsive website to showcase my skills, projects, and professional journey.
 
 ## Overview
 
